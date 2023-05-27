@@ -12,6 +12,8 @@
         tearDown            在测试类中每一个用例执行后都会执行一遍tearDown
         setUpClass          在测试类中第一个用例执行前执行一遍setUp
         tearDownClass       在测试类中最后一个用例执行后执行一遍tearDown
+
+    ###注意：setUpClass 和 tearDownClass前要加语法糖 @classmethod
 '''
 
 import unittest

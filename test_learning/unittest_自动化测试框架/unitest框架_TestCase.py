@@ -48,7 +48,7 @@ class TestLogin(unittest.TestCase):
 '''
 unittest四大核心概念
 TestCase            测试用例
-TestSuite           测试套件
+TestSuite           测试套件 
 TextTestRunner      执行结果
 Fixture             前置后置
 
