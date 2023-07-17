@@ -1,0 +1,12 @@
+ 994 syd_log INFO 数据驱动思想_拆包优化_日志输出.py-30 **********用例开始执行**********
+ 994 syd_log INFO 数据驱动思想_拆包优化_日志输出.py-38 入参为：{'param': ('311004', 'Wan0801an!'), 'expect': {'code': 0, 'msg': 'login success！'}}
+ 994 syd_log INFO 数据驱动思想_拆包优化_日志输出.py-40 结果为：{'code': 0, 'msg': 'login success！'}
+ 994 syd_log INFO 数据驱动思想_拆包优化_日志输出.py-33 **********用例执行结束**********
+ 994 syd_log INFO 数据驱动思想_拆包优化_日志输出.py-30 **********用例开始执行**********
+ 994 syd_log INFO 数据驱动思想_拆包优化_日志输出.py-38 入参为：{'param': ('311005', 'Wan0801an!'), 'expect': {'code': 1, 'msg': 'id or password Error!'}}
+ 994 syd_log INFO 数据驱动思想_拆包优化_日志输出.py-40 结果为：{'code': 1, 'msg': 'id or password Error!'}
+ 994 syd_log INFO 数据驱动思想_拆包优化_日志输出.py-33 **********用例执行结束**********
+ 994 syd_log INFO 数据驱动思想_拆包优化_日志输出.py-30 **********用例开始执行**********
+ 994 syd_log INFO 数据驱动思想_拆包优化_日志输出.py-38 入参为：{'param': ('', ''), 'expect': {'code': 2, 'msg': 'PLZ enter id and password'}}
+ 994 syd_log INFO 数据驱动思想_拆包优化_日志输出.py-40 结果为：{'code': 2, 'msg': 'PLZ enter id and password'}
+ 994 syd_log INFO 数据驱动思想_拆包优化_日志输出.py-33 **********用例执行结束**********
