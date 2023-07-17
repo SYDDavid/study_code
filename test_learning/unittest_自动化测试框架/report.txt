@@ -1,9 +1,0 @@
-test_login_error (test_login.TestLogin) ... ok
-test_login_none (test_login.TestLogin) ... ok
-test_login_success (test_login.TestLogin) ... ok
-test_register_success (test_register.TestRegister) ... ok
-
-----------------------------------------------------------------------
-Ran 4 tests in 0.000s
-
-OK
