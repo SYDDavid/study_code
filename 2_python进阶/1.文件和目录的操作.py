@@ -31,8 +31,8 @@ shutil.rmtree('syd1', ignore_errors=True)  # ignore_errors=True若目录不存�
 
 ### 拷贝目录 及其目录下子目录与文件
 
-# shutil.copytree('e:\code\python基础', r'e:\code\tmp')  # 目标路径存在会报错，目标路径若不存在，先创建该路径，再复制目录
-shutil.copytree('e:\code\python基础', r'e:\code\tmp', dirs_exist_ok=True)
+# shutil.copytree('e:\code\1_python基础', r'e:\code\tmp')  # 目标路径存在会报错，目标路径若不存在，先创建该路径，再复制目录
+shutil.copytree(r'e:\code\1_python基础', r'e:\code\tmp', dirs_exist_ok=True)
 
 ### 修改文件名，目录名
 ## 注意：windows下目标路径存在会报错，Linux下直接覆盖
