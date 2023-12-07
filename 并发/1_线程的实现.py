@@ -18,6 +18,8 @@ Barrier：
     传入参数你，当n个线程加入前，所有线程处于等待状态
 '''
 
+'''参考资料：https://blog.csdn.net/u010701274/article/details/122559912'''
+
 import threading
 import time
 import random
