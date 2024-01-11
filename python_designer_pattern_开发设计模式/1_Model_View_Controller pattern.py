@@ -19,14 +19,14 @@ class Model(object):
 
     @classmethod
     def getAll(self):
-        database = open('db.txt', 'r')
+        database = open('1_Model_View_Controller pattern_db.txt', 'r', encoding='UTF-8')
         result = []
         json_list = json.loads(database.read())
         for item in json_list:
-            item = json.loads(item)
-            Model = Model(item['first_name'], item['last_name'])
-            result.append(Model)
+            model = Model(item['first_name'], item['last_name'])
+            result.append(model)
         return result
+
 
 # 视图永远不会与模型交互; 控制器完成这项工作
 class View():
@@ -43,6 +43,7 @@ class View():
     def endView(self):
         print('Goodbye!')
 
+
 class Controller():
 
     def showAll(self):
@@ -51,8 +52,11 @@ class Controller():
 
     def start(self):
         View().startView()
-        input = input('')
-        if input == 'y':
+        if input() == 'y':
             return self.showAll()
         else:
             return View().endView()
+
+
+if __name__ == '__main__':
+    Controller().start()
