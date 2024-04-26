@@ -34,7 +34,7 @@ class Handle_Of_Excel:
     # 获取整表数据
     def get_data(self, num_rows=0):
         data_list = []
-        if num_rows:
+        if num_rows != 0:
             dict_row = self._get_data_row(num_rows)
             data_list.append(dict_row)
         else:
