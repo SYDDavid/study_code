@@ -1,24 +1,37 @@
-# from 自动化.接口自动化.test_learning.post_auto_test_了解接口.layered_design.Common.handle_excel import Handle_Of_Excel
-import tkinter as tk
-from tkinter import filedialog
-from openpyxl import load_workbook
-
-root = tk.Tk()
-root.withdraw()  # 隐藏主窗口
-
-file_path = filedialog.askopenfilename()
-
-print(file_path)
-
-excel = load_workbook(file_path)
-st = excel['1']
-
-for i in range(st.max_row):
-    cell = st._get_cell(i + 1, 1)
-    content = cell.value
-    if content == '':
-        st._get_cell(i + 1, 1).value = '一体化部件'
-    else:
-        st._get_cell(i + 1, 1).value = content + '、一体化部件'
-
-excel.save(file_path)
+connectorConfig = {
+    "type": "json",
+    "returnType": "json",
+    "onloadTrigger": False,
+    "dataSourceType": "interface",
+    "customData": {"type": "value", "code": "{}", "storeType": "string",
+                   "list": [{"id": "8a881370-1e2d-11ef-abb1-89047233e570", "label": "", "value": ""}]},
+    "interfaceType": "custom",
+    "url": "http://hapi.hikvision.com.cn/mock/7331/syd",
+    "componentId": "hapi",
+    "serviceType": "hapi",
+    "authorizationType": "noAuthorization",
+    "authorizationValue": {"method": "aksk", "ak": "", "sk": ""},
+    "requestType": "post",
+    "modelCode": "",
+    "modelOpType": "query",
+    "componentSet": "copasTopicSet",
+    "headerParamStruct": {
+        "root": {"type": "object", "disabledType": True, "desc": "根节点", "disabledTitle": True, "bindValue": "",
+                 "disabledBindValue": True, "bindType": "bind"}},
+    "paramStruct": {
+        "root": {"type": "object", "disabledType": True, "desc": "根节点", "disabledTitle": True, "bindValue": "",
+                 "disabledBindValue": True}},
+    "pathParamStruct": {
+        "root": {"type": "object", "disabledType": True, "desc": "根节点", "disabledTitle": True, "bindValue": "",
+                 "disabledBindValue": True, "properties": {}}},
+    "resultStruct": {
+        "root": {"type": "object", "disabledType": True, "desc": "根节点", "disabledTitle": True, "bindValue": "",
+                 "disabledBindValue": True}}, "dealParamStructFun": "", "dealResultFun": "",
+    "successEvent": [],
+    "successMsgConfig": {"enable": False, "msgSource": "interface", "msgText": "数据请求成功"},
+    "failEvent": [],
+    "failMsgConfig": {"enable": True, "msgSource": "interface", "msgText": "系统异常，请联系管理员"},
+    "pollingConfig": {"enable": False, "pollingTime": 1},
+    "loadingConfig": {"enable": False, "target": "all"},
+    "extraInfo": ""
+}
