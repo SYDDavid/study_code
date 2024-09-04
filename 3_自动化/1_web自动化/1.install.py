@@ -18,10 +18,8 @@ wd = webdriver.Chrome()
 # 调用WebDriver的get方法，打开具体页面
 wd.get('https://www.baidu.com')
 
-
-
 ready_to_quit = input('if U R ready to quit PLZ press:quit')
 
-if ready_to_quit=='quit':
+if ready_to_quit == 'quit':
     # 退出关闭WebDriver示例
     wd.quit()

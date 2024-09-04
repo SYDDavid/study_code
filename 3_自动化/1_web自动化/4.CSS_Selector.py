@@ -24,10 +24,12 @@
             class为footer1的div标签下的子节点，节点标签为span，其中包含值为http://www.miitbeian.gov.cn的属性href
 
     CSS_Selector的组选择
-        PS：个人觉得 依次搜两个列表，拼接一下是一样的效果
+
         1、逗号分割                              div,#BYHY                  得到div标签元素和id为BYHY的标签
-        2、逗号分割与后代元素组合                 #t1 > span,p               识别：id为t1下的span和p标签
-                                                #t1 > span,#t2 > p         识别：id为t1下的span标签和id为t2下的p标签
+        2、逗号分割与后代元素组合                 #t1 > span,p               识别：id为t1下的span + 全页面的p标签
+                                                #t1 > span,#t1 > p         识别：id为t1下的span标签和 + id为t1下的p标签
+
+        注意：组选择下的返回，按照子组合定位元素，依次定位后，按照原html出现顺序依次展示！！
 '''
 
 from selenium import webdriver
@@ -41,12 +43,23 @@ wd.implicitly_wait(10)
 
 wd.get('https://cdn2.byhy.net/files/selenium/sample1b.html')
 
-CSS_Selector = 'span'
+CSS_Selector = '#t1 > span , #t1 > p'
 
-span_list = wd.find_elements(By.CSS_SELECTOR, CSS_Selector)
+element_list = wd.find_elements(By.CSS_SELECTOR, CSS_Selector)
 
-for i in span_list:
-    print(i.text)
+for element in element_list:
+    print(element.text)
+
+# 组选择下按照原html展示顺序验证
+
+print('*'*50)
+
+CSS_Selector2 = '#t2 > span , #t1 > span , #t1 > p'
+
+element_list = wd.find_elements(By.CSS_SELECTOR, CSS_Selector2)
+
+for element in element_list:
+    print(element.text)
 
 ready_to_quit = input('if U R ready to quit PLZ press:quit')
 

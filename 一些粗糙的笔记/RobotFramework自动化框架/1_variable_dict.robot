@@ -21,7 +21,7 @@ Test dict-2
     LOG    ${the_boy}
     ${the_girl_1}   pop from dictionary    ${the_boy}   favirate
     LOG    ${the_boy}
-    LOG    ${the_girl_1}
+    LOG    ${the_girl_1}y
     keep in dictionary    ${the_boy}    name
     LOG    ${the_boy}
 

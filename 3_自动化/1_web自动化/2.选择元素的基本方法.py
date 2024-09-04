@@ -46,29 +46,23 @@ wd.get('https://www.byhy.net/_files/stock1.html')
 
 
 
-
 # 通过标签定位
 element = wd.find_element(By.TAG_NAME, 'footer')
 print(element.text)
 
-print('*'*50)
+print('*' * 50)
 
 # 通过获取同类元素得到列表后按照索引定位
 elements = wd.find_elements(By.CLASS_NAME, 'result-item')
 item = elements[0]
 print(item.text)
 
-print('*'*50)
+print('*' * 50)
 
 # 先WebElements后定位范围内标签
-we=wd.find_element(By.CLASS_NAME,'search-result')
-item_span=we.find_elements(By.TAG_NAME,'span')[0]
+we = wd.find_element(By.CLASS_NAME, 'search-result')
+item_span = we.find_elements(By.TAG_NAME, 'span')[0]
 print(item_span.text)
-
-
-
-
-
 
 ready_to_quit = input('if U R ready to quit PLZ press:quit')
 
