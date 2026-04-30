@@ -25,3 +25,8 @@ import yaml
 with open('syd_config_dict.yaml', encoding='utf-8') as fs:
     dic = yaml.load(fs, yaml.FullLoader)
 print(dic)
+
+
+with open('syd_config_list.yaml', encoding='utf-8') as fs:
+    dic = yaml.load(fs, yaml.FullLoader)
+print(dic)
